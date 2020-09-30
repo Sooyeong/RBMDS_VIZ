@@ -18,7 +18,7 @@ mData <- matrix(c(0, 1,10,
                   0.3, 4,10,
                   1, 4,10,
                   4, 7,10),nrow=4,ncol=3,byrow=T)
-
+geom_histogram()
 # declare it as datframe
 head(mData)
 
@@ -36,6 +36,9 @@ H$prior
 
 # replicate plot(H)'s report to ggplotly objects
 plot(H)
+
+View(H)
+
 
 # Added together with the plot 
 H$fitted_model 
@@ -107,5 +110,9 @@ H$bmd
 p_test<-ggplot()+geom_density(data=model_fitted, aes(x=X1))
 
 p_test
+
+
+# Check fitting result; 
+
 # Q1) Is there any way that I can add title automatically based on the dataset?
 
